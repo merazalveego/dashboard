@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designer Dashboard</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <div id="dashboard">
+    <h1>Designer Dashboard</h1>
+    <form id="uploadForm">
+      <input type="text" id="title" placeholder="Post Title" required>
+
+      <label for="imageUpload">Upload Image:</label>
+      <input type="file" id="imageUpload" accept="image/*" required>
+
+      <label for="fileUpload">Upload Design File:</label>
+      <input type="file" id="fileUpload" accept=".plp, .zip, .psd, .ai" required>
+
+      <input type="text" id="resolution" placeholder="Resolution (e.g., 1920x1080)" required>
+      <input type="text" id="contributor" placeholder="Contributor Name" required>
+
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Graphics">Graphics</option>
+        <option value="Web Design">Web Design</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Print">Print</option>
+      </select>
+
+      <input type="text" id="tags" placeholder="Related Tags (comma separated)" required>
+      <textarea id="description" placeholder="Description" required></textarea>
+
+      <button type="submit">Upload Design</button>
+    </form>
+    <div id="status"></div>
+  </div>
+  <script src="/src/firebase.js"></script>
+  <script src="/src/github-api.js"></script>
+  <script src="/src/app.js"></script>
+</body>
+</html>
